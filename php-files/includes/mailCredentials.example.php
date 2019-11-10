@@ -1,0 +1,6 @@
+<?php
+
+
+
+$emailAddress = '';
+$emailPassword = '';

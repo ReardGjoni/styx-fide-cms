@@ -1,0 +1,75 @@
+body {
+    background-color: #1b2431;
+  }
+  .editor {
+    margin-top: 100px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+    background-color: #1b2431;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: right;
+  }
+
+  .editor-menuebar {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .editor-menuebar button {
+    background-color: #ff6e48;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 1rem;
+    background-color: #ffffff1a;
+    cursor: pointer;
+    transition: all 250ms;
+    border: none;
+  }
+  .editor-menuebar button:hover {
+    background-color: #ff6e48;
+    color: #ffffff;
+  }
+  
+  .editor-canvas {
+    background-color: rgba(255, 255, 255, 0.03);
+    width: 100%;
+    height: 30rem;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: #ffffff;
+    font-family: arial;
+    line-height: 1.5em;
+  }
+
+  .editor-canvas:empty:not(:focus):before {
+    content:attr(data-text);
+    color: #7a7a7a;
+  }
+
+  .editor-canvas:focus {
+    outline: none;
+  }
+
+  .title {
+    background-color: rgb(255, 255, 255, 0.08);
+    width: 100%;
+    height: 5rem;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: #ffffff;
+    font-family: arial;
+    line-height: 1.5em;
+  }
+
+  .title:empty:not(:focus):before {
+    content:attr(data-text);
+  }
+  
+  .title:focus {
+    outline: none;
+  }

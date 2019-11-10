@@ -1,0 +1,6 @@
+php-files/includes/dbConfig.php
+php-files/includes/mailCredentials.php
+vendor
+img/intro/
+img/permissions/
+img/DB-Model.png

@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    font-family: 'Major Mono Display';
+    margin-bottom: -2400px;
+}
+
+.containerr {
+    height: 100%;
+}
+
+.active {
+    color: red;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    padding: 2em;
+    position: fixed;
+    background: rgba(235, 212, 204, 0);
+    width: 100%;
+    z-index: 20000;
+}
+
+.logo {
+    color: #001b48;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.menu-btn {
+    width: 50px;
+    height: 50px;
+    float: right;
+    cursor: pointer;
+    color: #514945;
+    font-size: 30px;
+    padding-right: 3em;
+    font-weight: bold;
+}
+
+nav {
+    position: fixed;
+    background: black;
+    opacity: 0.95;
+    z-index: 100000;
+    height: 100%;
+    padding: 2em;
+    width: 100%;
+    display: none;
+    transform-origin: right;
+}
+
+
+
+.rotate {
+    transform: 0.8s ease-in-out;
+}
+
+.close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 64px;
+    color: white;
+    opacity: 0;
+}
+
+#points {
+    display: flex;
+}
+
+#point1, #point2, #point3 {
+    transition: 1s;
+}
+
+.animated-points {
+    transition: 1s;
+}
+
+ul {
+    list-style-type: none;
+    margin: 10% auto 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 50px;
+    width: 80%;
+}
+
+ul a {
+    color: white;
+    font-weight: bold;
+    font-size: 2.4em;
+}
+
+ul li {
+    opacity: 0;
+}
+
+
+.show-menu {
+    display: block;
+    animation: slide-menu 1s ease-in forwards;
+}
+
+.show-menu .close-btn {
+    animation: show-x 0.5s 1s forwards;
+}
+
+.show-menu li:nth-last-of-type(1) {
+    animation: menu-item-anim 0.6s forwards 1s ease-in-out;
+}
+
+.show-menu li:nth-last-of-type(2) {
+    animation: menu-item-anim 0.6s forwards 1.2s ease-in-out;
+}
+
+.show-menu li:nth-last-of-type(3) {
+    animation: menu-item-anim 0.6s forwards 1.4s ease-in-out;
+}
+
+.show-menu li:nth-last-of-type(4) {
+    animation: menu-item-anim 0.6s forwards 1.6s ease-in-out;
+}
+
+@keyframes slide-menu {
+    from {
+        transform: translateX(100%);
+    } to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes show-x {
+    from {
+        opacity: 0;
+        transform: rotate(0);
+    } to {
+        opacity: 1;
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes menu-item-anim {
+    0% {opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 300, 0, 1); }
+    4.1% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 125.912, 0, 1); }
+    8.11% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 31.647, 0, 1); }
+    12.11% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -5.53, 0, 1); }
+    16.12% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -13.007, 0, 1); }
+    27.23% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -2.352, 0, 1); }
+    38.34% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.311, 0, 1); }
+    60.56% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.007, 0, 1); }
+    82.78% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    100% {opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+}
+
+
+.firstSvgCont {
+    overflow: hidden;
+}
+
+.firstSvg {
+    width: 115%;
+    position: relative;
+    top: -70px;
+    left: -190px;
+}
+
+.headline {
+    position: absolute;
+    color: #514945;
+    top: 60%;
+    left: 10%;
+    font-size: 20px;
+}
+
+.secondSvg {
+    color: #EBD4CC;
+    width: 10%;
+    position: relative;
+    left: 61%;
+    bottom: 380px;
+}
+
+.firstGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 50px;
+    overflow: hidden;
+}
+
+.cont2 {
+    grid-column-start: 1;
+}
+
+.cont2 p {
+    font-size: 22px;
+    margin-left: 55%;
+    color: #514945;
+}
+
+
+.cont2 img {
+    width: 100%;
+    border-radius: 10%;
+    margin-left: -10%;
+}
+
+
+.cont3 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 20%;
+}
+
+.cont3 p {
+    font-size: 22px;
+    margin-left: 10%;
+    color: #514945;
+}
+
+
+.cont3 img {
+    width: 110%;
+    border-radius: 10%;
+}
+
+.cont4 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-left: -10%;
+}
+
+.cont4 p {
+    font-size: 22px;
+    margin-left: 45%;
+    color: #514945;
+}
+
+
+.cont4 img {
+    width: 80%;
+    border-radius: 10%;
+}
+
+.cont5 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-top: 20%;
+}
+
+.cont5 p {
+    font-size: 22px;
+    margin-left: 10%;
+    color: #514945;
+}
+
+
+.cont5 img {
+    width: 110%;
+    border-radius: 10%;
+}
+
+
+.cont6 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.cont6 p {
+    font-size: 22px;
+    margin-left: 30%;
+    color: #514945;
+}
+
+
+.cont6 img {
+    width: 120%;
+    border-radius: 10%;
+    margin-left: -10%;
+}
+
+.secondSvgCont {
+    position: relative;
+    bottom: 1300px;
+    left: 54%;
+}
+
+.thirdSvg {
+    width: 50%;
+}
+
+.thirdSvgCont {
+    position: relative;
+    bottom: 1500px;
+    left: 91%;
+}
+
+.fourthSvg {
+    width: 7%;
+}
+
+.fourthSvgCont {
+    position: relative;
+    bottom: 2450px;
+}
+
+
+.secondGrid {
+    color: #514945;
+    font-size: 22px; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    position: absolute;
+    top: 3500px;
+    left: 200px;
+    grid-gap: 100px;
+}
+
+
+.firstButton {
+    font-family: 'Major Mono Display';
+    font-size: 17px;
+    background-color: rgb(48, 48, 48);
+    border: none;
+    border-radius: 15px;
+    width: 170px;
+    height: 50px;
+    position: absolute;
+    top: 4000px;
+    left: 45%;
+}
+
+.firstButton a {
+    text-decoration: none;
+    color: white;
+}
+
+.firstButton:hover {
+    background-color: #d6e8ee;
+    transition: 1s;
+}
+
+
+.firstButton:hover a {
+    color: #514945;
+    transition: 1s;
+}
+
+footer {
+    position: relative;
+    top: -2000px;
+    background-color: #97CADB;
+    height: 600px;
+    width: 110%;
+    right: 5%;
+    border-radius: 60%;
+}
+
+footer i {
+    position: relative;
+    left: 44%;
+    top: 15%;
+    font-size: 42px;
+    letter-spacing: 50px;
+    color: white;
+}
+

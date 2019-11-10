@@ -1,0 +1,9 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME}\.php -f
+
+RewriteRule ^post/([0-9]+) post.php?id=$1 [NC,L]
+
+
